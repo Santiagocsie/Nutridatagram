@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/stylesm.css' %}">
+    <title>Nutridatagram</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-sup">
+            <div>
+                <a href="{% url 'menu' %}" class="enlace">Nutridatagram</a>
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class='bx bxs-user-circle'></i>
+            </label>
+            <ul class="Vert">
+                <li><a href="{% url 'login' %}" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="{% url 'menu' %}">INICIO</a></li>
+                <li><a href="{% url 'plato' %}">CREAR PLATO</a></li>
+                <li><a href="#">FAVORITOS</a></li>
+            </ul>
+        </nav>
+        <div class="banner-btn">
+            <ul>
+                <li><a class="btn-a" href="{% url 'plato' %}">Crear Plato</a></li>
+                <li><a class="btn-b" href="#">Platos Favoritos</a></li>
+            </ul>
+        </div>
+        <nav class="nav-menu">
+            <a href="{% url 'menu' %}" class="active"><i class='bx bx-home-alt-2'></i>INICIO</a>
+            <a href="{% url 'plato' %}" class="active"><i class='bx bx-message-alt-add'></i>CREAR PLATO</a>
+            <a href="#" class="active"><i class='bx bx-star'></i>FAVORITOS</a>
+        </nav>
+    </header>
+</body>
+
+</html>
+
